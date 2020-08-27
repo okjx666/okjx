@@ -1,0 +1,32 @@
+body,html{padding-bottom:0!important;padding:0;margin:0;width:100%;height:100%;background-color:#000;color:#999;font-size:14px}
+#video,#error,#free,#loading{padding:0;margin:0;width:100%;height:100%;background:#000;color:#999}
+a{color:#000}
+video{position:fixed;right:0;bottom:0;min-width:100%;min-height:100%}
+source{min-width:100%;min-height:100%;height:auto;width:auto}
+#loading{text-align:center;padding-top:20%}
+h2{color:#ccc;margin:0;font:1.1em '微软雅黑';text-transform:uppercase;letter-spacing:.1em;font-size:16px}
+h3{color:#ccc;margin:0;font:.6em '微软雅黑';text-transform:uppercase;letter-spacing:.1em}
+#loading span{display:inline-block;vertical-align:middle;width:21px;height:21px;margin:.19em;background:#007DB6;border-radius:2.6em;-webkit-animation:loading 1s infinite alternate;animation:loading 1s infinite alternate}
+#loading span:nth-of-type(1){background:rgb(255,0,0);-webkit-animation-delay:.2s;animation-delay:.2s}
+#loading span:nth-of-type(2){background:rgb(255,128,0);-webkit-animation-delay:.2s;animation-delay:.2s}
+#loading span:nth-of-type(3){background:rgb(255,255,0);-webkit-animation-delay:.4s;animation-delay:.4s}
+#loading span:nth-of-type(4){background:rgb(0,255,0);-webkit-animation-delay:.6s;animation-delay:.6s}
+#loading span:nth-of-type(5){background:rgb(0,255,255);-webkit-animation-delay:.8s;animation-delay:.8s}
+#loading span:nth-of-type(6){background:rgb(0,0,255);-webkit-animation-delay:1s;animation-delay:1s}
+#loading span:nth-of-type(7){background:rgb(128,0,255);-webkit-animation-delay:1.2s;animation-delay:1.2s}
+#loading .timemsg{font-size:16px;color:#ccc;font-weight:bold;font-style:inherit}  
+.tvp-controls-hide #a2{display:none}
+#stats{position:fixed;top:5px;left:10px;font-size:12px;color:#fdfdfd;z-index:2147483647;text-shadow:1px 1px 1px #000, 1px 1px 1px #000}
+.h2ui_needweiyi.h2_weiyiclass video{transform: translate(-100%,0);}
+.m-d-text {opacity: 1!important;background-color: #e6e6e6!important;color: #101010!important;}
+.dplayer-logo {left: auto!important;right: 50px!important;top: 50px!important;max-width: 120px!important;}
+@-webkit-keyframes loading{0%{opacity:0}
+100%{opacity:1}
+}
+@keyframes loading{0%{opacity:0}
+100%{opacity:1}
+}
+#a2{position:absolute; z-index:2147483647; bottom:-5px; left:25%; display:none}
+@media (max-width:767px){
+#a2{ left:0} 	
+}
