@@ -560,7 +560,7 @@ to{background-position:0 -600px}
 	height: 100%;
 }
 #loading-box .video-panel-blur-image{
-	background: url(https://img10.360buyimg.com/ddimg/jfs/t1/176340/18/8164/733759/609395e4E2df09db0/80b3d377da26e626.jpg) #000000;
+	background: url() #000000;
 	display: block;
     width: 110%;
     height: 110%;
@@ -579,7 +579,7 @@ to{background-position:0 -600px}
 	width: 320px;
     height: 184px;
     z-index: 3;
-    background: url(https://img13.360buyimg.com/ddimg/jfs/t1/185080/17/2599/91779/6093991cEba246750/4634b6e0c56b6510.png) no-repeat;
+    background: url() no-repeat;
     -webkit-transform: scale(.5);
     transform: scale(.5);
     -webkit-animation: iconAnimation .94s steps(1) infinite;
