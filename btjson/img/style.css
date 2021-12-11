@@ -1,0 +1,22 @@
+@charset "utf-8";
+body {
+	font-family: 微软雅黑;
+	background: url(../img/bg.gif);
+}
+.row {
+	width: 80%;
+	margin: auto;
+
+}
+.page-header {
+	margin: 20px 0px;
+}
+.glyphicon{ padding-right:5px;}
+.duolie{ padding:0px; padding-right:2px; margin-bottom:5px;}
+.checkbox{ margin-left:30px;}
+small{ color:#999}
+@media screen and ( max-width: 980px ) {
+.row {
+	width: 100%;
+}
+}
