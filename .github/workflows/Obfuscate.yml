@@ -1,0 +1,57 @@
+名称：构建混淆BPB面板
+
+在:
+  推:
+    分支:
+      - 主页
+  日程安排:
+        # 每天凌晨1点运行
+
+
+权限:
+  目录: 写
+
+工作:
+  构建:
+    运行于：ubuntu-latest
+
+    步骤:
+      - 名称: 查看代码
+        使用：actions/checkout@v4
+
+      - 名称: 设置 Node.js
+        使用：actions/setup-node@v4
+        与：
+          节点版本："最新"
+
+      - 名称: 安装依赖项
+        运行: |
+          npm install -g javascript-obfuscator
+
+      - 名称: 克隆BPB工作集
+        运行: |
+          wget -O origin.js https://raw.githubusercontent.com/bia-pain-bache/BPB-Worker-Panel/refs/heads/main/build/unobfuscated-worker.js
+      
+      - 名称: 混淆BPB工作器js
+        运行: |
+          javascript-obfuscator origin.js --output _worker.js
+          --紧凑 true
+          --控制流展平 true
+          --控制流平坦化阈值 1
+          --死代码注入 true
+          --死代码注入阈值 1 \
+          --标识符名称生成器 十六进制
+          --重命名全局变量 true
+          --字符串数组 true
+          --string-array-encoding 'rc4'
+          --string-array-threshold 1 \
+          --转换对象键 true
+          --unicode-escape-sequence true
+
+      - 名称: 提交更改
+        使用：stefanzweifel/git-auto-commit-action@v5
+        与：
+          分支：主分支
+          commit_message: ':箭头向上: 更新最新的bpb面板'
+          commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'
+          push_options：'--set-upstream'
